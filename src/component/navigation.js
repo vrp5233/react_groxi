@@ -1,28 +1,40 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Link, NavLink } from "react-router-dom";
 
-class NavigationComponent extends React.Component{
-   render (){
+import { Container, Navbar, Nav, NavItem } from 'react-bootstrap'
+class NavigationComponent extends React.Component {
+   render() {
       return (
          <header>
-            <div className="container">
-               <div className="logo">
-                  <img src="images/logo.png" alt="" />
-               </div>
-               <nav>
-                  <ul>
-                     <li><FontAwesomeIcon icon="{faCoffee}" /></li>
-                     <li>Home</li>
-                     <li>About</li>
-                     <li>Shop</li>
-                     <li>Pages</li>
-                     <li>Blog</li>
-                     <li>Contact</li>
-                  </ul>
-               </nav>
-            </div>
+            <Container className="navbarWraper">
+               <Navbar.Brand>
+                  <Link to="/">
+                     <img src="images/logo.png" alt="" />
+                  </Link>
+               </Navbar.Brand>
+               <Nav className="navigationMenu">
+                  <Nav.Item><Nav.Link to="/">Home</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link to="/about">About</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link to="/shop">Shop</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link to="/pages">Pages</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link to="/blog">Blog</Nav.Link></Nav.Item>
+                  <Nav.Item><Nav.Link to="/contact">Contact</Nav.Link></Nav.Item>
+               </Nav>
+               <Nav className="iconMenu">
+                  <NavItem><Nav.Link><FontAwesomeIcon icon={faSearch} /></Nav.Link></NavItem>
+                  <NavItem><Nav.Link><FontAwesomeIcon icon={faUser} /></Nav.Link></NavItem>
+                  <NavItem><Nav.Link><FontAwesomeIcon icon={faHeart} /></Nav.Link></NavItem>
+                  <NavItem>
+                     <Nav.Link className="shopingCart">
+                        <FontAwesomeIcon icon={faShoppingCart} />
+                        <span className="count">0</span>
+                     </Nav.Link>
+                  </NavItem>
+               </Nav>
+            </Container>
          </header>
       )
    }

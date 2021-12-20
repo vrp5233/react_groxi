@@ -1,0 +1,374 @@
+:root {
+   /* ===== Colors ========== */
+   --green: 11, 127, 83;
+   --black: 37, 41, 50;
+   --white: 255, 255, 255;
+   --green: 20, 70, 46;
+   --lightGreen2: 169, 216, 35;
+   --lightGrey: 246, 250, 251;
+   --lightSimon: 145, 221, 216;
+   --lightDarkGrey: 189, 189, 189;
+   --lightRed: 249, 145, 30;
+   --darkOrange: 247, 139, 26;
+   /* ===== Fonts ========== */
+   --heading_70: 70px;
+   --heading_45: 45px;
+   --heading_25: 25px;  
+   --heading_26: 26px;
+   --heading_24: 24px;
+   --heading_22: 22px;
+   --para_20: 20px;
+   --para_16: 16px;
+   /* ===== Fonts Family ========== */
+   --jost: 'Jost';
+   --barlow: 'Barlow';
+   --trans: all 0.3s;
+}
+
+/*===========================================
+   Body CSS Style Start
+=============================================*/
+
+::selection {
+   color: rgb(var(--white));
+   background: rgba(var(--green), 0.8);
+}
+
+a, button, [type="button"] {
+   outline: none;
+}
+
+button:focus {
+   outline: none;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   font-family: 'Jost';
+   font-family: 'Barlow';
+}
+
+
+ul, li, ol {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   margin-bottom: 0;
+   font-weight: 700;
+}
+
+a, a:hover {
+   text-decoration: none;
+}
+
+h1 {
+   font-size: var(--heading_70);
+}
+
+h2 {
+   font-size: var(--heading_45);
+}
+
+h3 {
+   font-size: var(--heading_25);
+}
+
+h4 {
+   font-size: var(--heading_26);
+}
+
+h5 {
+   font-size: var(--heading_24);
+}
+
+h6 {
+   font-size: var(--heading_22);
+}
+
+p {
+   font-size: var(--para_16);
+   font-weight: 400;
+}
+
+.fw700 {
+   font-weight: 700 !important;
+}
+
+.fw600 {
+   font-weight: 600 !important;
+}
+
+.fw500 {
+   font-weight: 500 !important;
+}
+
+.fw400 {
+   font-weight: 400 !important;
+}
+
+.fw300 {
+   font-weight: 300 !important;
+}
+
+.jost {
+   font-family: 'Jost' !important;
+}
+
+.barlow {
+   font-family: 'Barlow' !important;
+}
+
+
+.smallTitle {
+	color: rgb(var(--lightGreen2));
+	font-size: var(--heading_25);
+	font-weight: 500;
+	position: relative;
+	font-family: var(--jost);
+	margin-bottom: 20px;
+}
+
+.title {
+	font-size: var(--heading_70);
+	color: rgb(var(--black));
+	line-height: 70px;
+	font-weight: 600;
+	font-family: var(--jost);
+	margin-bottom: 18px;
+}
+
+.container {
+   max-width: 1110px;
+}
+
+/*===========================================
+   Body CSS Style End
+=============================================*/
+
+
+/*===========================================
+    Colors CSS Style Start
+=============================================*/
+
+/*===========================================
+    Colors CSS Style End
+=============================================*/
+
+
+/*===========================================
+    Button CSS Style Start
+=============================================*/
+.btn-group {
+   display: inline-flex;
+   column-gap: 16px;
+}
+.btn {
+   min-width: 175px;
+   height: 53px;
+   font-size: var(--para_16);
+   font-family: var(--barlow);
+   color: rgb(var(--white));
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.GreenBtn {
+   background-color: rgb(var(--green));
+}
+.GreenBtn:hover {
+   background-color: rgb(var(--lightGreen2));
+   color: rgb(var(--white));
+}
+.lightGreenBtn {
+   background-color: rgb(var(--lightGreen2));
+}
+.lightGreenBtn:hover {
+   background-color: rgb(var(--green));
+      color: rgb(var(--white));
+}
+/*===========================================
+    Button CSS Style End
+=============================================*/
+
+
+
+/*===========================================
+    Form CSS Style Start
+=============================================*/
+
+/*===========================================
+    Form CSS Style End
+=============================================*/
+
+
+
+/*===========================================
+    Banner CSS Style Start
+=============================================*/
+
+.overlay {
+   position: relative;
+   z-index: 1;
+}
+
+.overlay::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(var(--black));
+   opacity: 0.20;
+   z-index: -1;
+}
+
+.banner {
+   background-position: top left;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+.homeBanner {
+   /* background-image: url(assets/images/banner.jpg); */
+}
+
+/*===========================================
+  Banner CSS Style End
+=============================================*/
+
+
+
+/*===========================================
+    Navigation CSS Style Start
+=============================================*/
+header {
+	background-color: var(--lightDarkGrey);
+	padding: 45px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+   z-index: 999;
+}
+
+header .navbar-brand {
+   padding: 0;
+}
+
+.navbarWraper {
+   display: flex;
+   align-items: center;
+}
+
+.navigationMenu {
+   margin-left: auto;
+   display: flex;
+   column-gap: 35px;
+}
+
+.iconMenu {}
+
+.navigationMenu .nav-link {
+   font-family: var(--barlow);
+   color: rgb(var(--black));
+   font-size: var(--para_20);
+   padding: 0;
+   transition: var(--trans);
+}
+
+.navigationMenu .nav-link:hover {
+   color: rgb(var(--lightGreen2));
+}
+
+
+
+
+.iconMenu {
+   display: flex;
+   column-gap: 12px;
+   margin-left: 45px;
+}
+
+.iconMenu .nav-link {
+   width: 42px;
+   height: 42px;
+   background-color: #fff;
+   color: rgb(var(--lightGreen2));
+   border-radius: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: var(--trans);
+}
+
+.iconMenu .nav-link:hover {
+   color: rgb(var(--green));
+}
+
+.shopingCart {
+   position: relative;
+}
+
+.shopingCart .count {
+   position: absolute;
+   top: -1px;
+   right: -1px;
+   background-color: rgb(var(--green));
+   color: rgb(var(--white));
+   border-radius: 50px;
+   display: inline-block;
+   width: 13px;
+   height: 13px;
+   font-size: 8px;
+   font-family: var(--jost);
+   font-weight: 400;
+   line-height: 13px;
+   text-align: center;
+}
+
+/*===========================================
+    Navigation CSS Style End
+=============================================*/
+
+/*===========================================
+    HomePage CSS Style Start
+=============================================*/
+.homeBanner {
+   position: relative;
+   z-index: 1;
+   height: 100vh;
+}
+.homeBanner .bannerImages {
+   mix-blend-mode: multiply;
+}
+.homeBanner .textWrapper {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 1;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+}
+.homeBanner .text {
+	max-width: 540px;
+	width: 100%;
+}
+.homeBanner .text h5{
+   line-height: 37px;
+   margin-bottom: 38px;
+}
+/*===========================================
+    HomePage CSS Style End
+=============================================*/
