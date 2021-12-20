@@ -1,0 +1,178 @@
+:root {
+   /* ===== Colors ========== */
+   --green: 11, 127, 83;
+}
+
+/*===========================================
+   Body CSS Style Start
+=============================================*/
+
+::selection {
+   color: rgb(var(--white));
+   background: rgba(var(--green), 0.8);
+}
+
+a, button, [type="button"] {
+   outline: none;
+}
+
+button:focus {
+   outline: none;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   height: 100%;
+   font-family: 'Jost';
+   font-family: 'Barlow';
+}
+
+
+ul, li, ol {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+   margin-bottom: 0;
+   font-weight: 700;
+}
+
+a, a:hover {
+   text-decoration: none;
+}
+
+h1 {
+   font-size: var(--heading_52);
+}
+
+h2 {
+   font-size: var(--heading_36);
+}
+
+h3 {
+   font-size: var(--heading_26);
+}
+
+h4 {
+   font-size: var(--heading_24);
+}
+
+h5 {
+   font-size: var(--heading_20);
+}
+
+p {
+   font-size: var(--para_16);
+   font-weight: 400;
+}
+
+.fw_700 {
+   font-weight: 700 !important;
+}
+
+.fw_600 {
+   font-weight: 600 !important;
+}
+
+.fw_500 {
+   font-weight: 500 !important;
+}
+
+.fw_400 {
+   font-weight: 400 !important;
+}
+
+
+
+.small_title {
+   color: rgb(var(--green));
+   text-transform: uppercase;
+   font-size: var(--para_14);
+   position: relative;
+   margin-bottom: 5px;
+   font-weight: 600;
+}
+
+.title {
+   color: rgb(var(--black));
+   line-height: 42px;
+   margin-bottom: 52px;
+}
+
+/*===========================================
+   Body CSS Style End
+=============================================*/
+
+
+/*===========================================
+    Colors CSS Style Start
+=============================================*/
+
+/*===========================================
+    Colors CSS Style End
+=============================================*/
+
+
+
+/*===========================================
+    Button CSS Style Start
+=============================================*/
+
+/*===========================================
+    Button CSS Style End
+=============================================*/
+
+
+
+/*===========================================
+    Form CSS Style Start
+=============================================*/
+
+/*===========================================
+    Form CSS Style End
+=============================================*/
+
+
+
+/*===========================================
+    Banner CSS Style Start
+=============================================*/
+
+.overlay {
+   position: relative;
+   z-index: 1;
+}
+
+.overlay::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(var(--black));
+   opacity: 0.20;
+   z-index: -1;
+}
+
+.banner {
+   background-position: top left;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+
+.home_banner {
+   background-image: url(assets/images/banner.jpg);
+}
+
+/*===========================================
+  Banner CSS Style End
+=============================================*/
