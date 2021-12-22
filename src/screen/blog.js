@@ -4,7 +4,7 @@ import NavigationComponent from '../component/navigation';
 import { Container } from 'react-bootstrap'
 
 
-class SignUpComponent extends React.Component {
+class BlogComponent extends React.Component {
    render() {
       return (
          <div>
@@ -13,7 +13,7 @@ class SignUpComponent extends React.Component {
             <img src="images/supermarket-paper-bag-full-healthy-food.png" alt="BannerImage" className="img-fluid bannerImages" />
             <Container className="textWrapper">
                <div className="text">
-                  <h1 className="title">SignUp</h1>
+                  <h1 className="title">Blog</h1>
                </div>
             </Container>
          </section>
@@ -22,4 +22,4 @@ class SignUpComponent extends React.Component {
    }
 }
 
-export default SignUpComponent;
+export default BlogComponent;

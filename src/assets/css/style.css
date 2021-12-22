@@ -13,7 +13,7 @@
    /* ===== Fonts ========== */
    --heading_70: 70px;
    --heading_45: 45px;
-   --heading_25: 25px;  
+   --heading_25: 25px;
    --heading_26: 26px;
    --heading_24: 24px;
    --heading_22: 22px;
@@ -64,10 +64,12 @@ ul, li, ol {
 h1, h2, h3, h4, h5, h6, p {
    margin-bottom: 0;
    font-weight: 700;
+   font-family: var(--jost);
 }
 
 a, a:hover {
    text-decoration: none;
+   font-family: var(--barlow);
 }
 
 h1 {
@@ -97,6 +99,7 @@ h6 {
 p {
    font-size: var(--para_16);
    font-weight: 400;
+   font-family: var(--barlow);
 }
 
 .fw700 {
@@ -129,25 +132,29 @@ p {
 
 
 .smallTitle {
-	color: rgb(var(--lightGreen2));
-	font-size: var(--heading_25);
-	font-weight: 500;
-	position: relative;
-	font-family: var(--jost);
-	margin-bottom: 20px;
+   color: rgb(var(--lightGreen2));
+   font-size: var(--heading_25);
+   font-weight: 500;
+   position: relative;
+   font-family: var(--jost);
+   margin-bottom: 20px;
 }
 
 .title {
-	font-size: var(--heading_70);
-	color: rgb(var(--black));
-	line-height: 70px;
-	font-weight: 600;
-	font-family: var(--jost);
-	margin-bottom: 18px;
+   font-size: var(--heading_45);
+   color: rgb(var(--black));
+   line-height: 70px;
+   font-weight: 600;
+   font-family: var(--jost);
+   margin-bottom: 50px;
 }
 
 .container {
    max-width: 1110px;
+}
+
+section {
+   padding: 140px 0;
 }
 
 /*===========================================
@@ -171,6 +178,7 @@ p {
    display: inline-flex;
    column-gap: 16px;
 }
+
 .btn {
    min-width: 175px;
    height: 53px;
@@ -179,21 +187,42 @@ p {
    color: rgb(var(--white));
    font-weight: 600;
    text-transform: uppercase;
+   border-radius: 0;
 }
+
 .GreenBtn {
    background-color: rgb(var(--green));
 }
+
 .GreenBtn:hover {
    background-color: rgb(var(--lightGreen2));
    color: rgb(var(--white));
 }
+
 .lightGreenBtn {
    background-color: rgb(var(--lightGreen2));
 }
+
 .lightGreenBtn:hover {
    background-color: rgb(var(--green));
-      color: rgb(var(--white));
+   color: rgb(var(--white));
 }
+
+.links {
+   font-size: 16px;
+   padding: 0;
+   border: 0;
+   background-color: transparent;
+   font-weight: 500;
+   font-family: var(--barlow);
+   color: rgb(var(--green));
+   transition: all 0.3s;
+}
+
+.links:hover {
+   color: rgb(var(--black));
+}
+
 /*===========================================
     Button CSS Style End
 =============================================*/
@@ -203,6 +232,27 @@ p {
 /*===========================================
     Form CSS Style Start
 =============================================*/
+.form-group {
+   margin-bottom: 25px;
+}
+
+label {
+   font-size: var(--para_16);
+   color: rgb(var(--black));
+   font-family: var(--jost);
+   font-weight: 500;
+}
+
+.form-control {
+   height: 53px;
+   border-radius: 0;
+   border-color: #e2e2e2;
+}
+
+.form-control:focus {
+   box-shadow: none;
+   border-color: #e2e2e2;
+}
 
 /*===========================================
     Form CSS Style End
@@ -232,14 +282,24 @@ p {
 }
 
 .banner {
-   background-position: top left;
-   background-size: cover;
+   background-position: top right;
+   background-size: 100%;
    background-repeat: no-repeat;
 }
 
+.innerBanner {
+   background-color: rgb(var(--lightGrey));
+   padding: 150px 0;
+}
 
-.homeBanner {
-   /* background-image: url(assets/images/banner.jpg); */
+.innerBannerImage {
+   background-image: url(../../../public/images/innerBanner.jpg);
+}
+
+.bannerVectorImage {
+   background-image: url(http://localhost:3000/static/media/bannerVector.13ffaddc9c36572be943.png);
+   background-size: auto;
+   background-position: left top;
 }
 
 /*===========================================
@@ -252,12 +312,12 @@ p {
     Navigation CSS Style Start
 =============================================*/
 header {
-	background-color: var(--lightDarkGrey);
-	padding: 45px 0;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+   background-color: var(--lightDarkGrey);
+   padding: 45px 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
    z-index: 999;
 }
 
@@ -278,7 +338,7 @@ header .navbar-brand {
 
 .iconMenu {}
 
-.navigationMenu .nav-link {
+.navigationMenu .nav-item a {
    font-family: var(--barlow);
    color: rgb(var(--black));
    font-size: var(--para_20);
@@ -286,7 +346,7 @@ header .navbar-brand {
    transition: var(--trans);
 }
 
-.navigationMenu .nav-link:hover {
+.navigationMenu .nav-item a:hover {
    color: rgb(var(--lightGreen2));
 }
 
@@ -299,7 +359,8 @@ header .navbar-brand {
    margin-left: 45px;
 }
 
-.iconMenu .nav-link {
+.iconMenu .nav-item a,
+.heartIcon {
    width: 42px;
    height: 42px;
    background-color: #fff;
@@ -311,7 +372,7 @@ header .navbar-brand {
    transition: var(--trans);
 }
 
-.iconMenu .nav-link:hover {
+.iconMenu .nav-item a:hover {
    color: rgb(var(--green));
 }
 
@@ -348,27 +409,204 @@ header .navbar-brand {
    z-index: 1;
    height: 100vh;
 }
+
 .homeBanner .bannerImages {
    mix-blend-mode: multiply;
 }
+
 .homeBanner .textWrapper {
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	z-index: 1;
-	margin: 0 auto;
-	left: 0;
-	right: 0;
-	transform: translateY(-50%);
+   position: absolute;
+   top: 50%;
+   width: 100%;
+   z-index: 1;
+   margin: 0 auto;
+   left: 0;
+   right: 0;
+   transform: translateY(-50%);
 }
+
 .homeBanner .text {
-	max-width: 540px;
-	width: 100%;
+   max-width: 540px;
+   width: 100%;
 }
-.homeBanner .text h5{
+.homeBanner .text .title {
+   font-size: var(--heading_70);
+}
+
+.homeBanner .text h5 {
    line-height: 37px;
    margin-bottom: 38px;
 }
+
+.loginForm {
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.loginForm .container {
+   max-width: 730px;
+}
+
+.loginForm .wrapper {
+   background-color: rgb(var(--white));
+   /* border: 1px solid rgb(var(--black), 0.1); */
+   padding: 40px 25px;
+   border-radius: 10px;
+   margin: 0 auto;
+   -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+   -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.05);
+}
+
+.loginFormWrapper {
+   max-width: 500px;
+}
+
+.categories {}
+
+.categories .text {
+   padding: 80px 30px;
+   position: relative;
+   overflow: hidden;
+   transform-style: preserve-3d;
+}
+
+.categories .text:hover {}
+
+.categories .text img {
+   position: absolute;
+   right: 25px;
+   bottom: 0px;
+   filter: drop-shadow(-10px 0px 10px rgba(0,0,0,0));   
+   transform: translateZ(50px);
+   transition: var(--trans);
+}
+.categories .text:hover img {
+   filter: drop-shadow(-10px 0px 10px rgba(0,0,0,0.2));
+}
+
+.categories .text img[alt="Vegitables"] {
+   right: -7px;
+   bottom: -5px;
+}
+
+.categories .text h3 {
+   font-family: var(--jost);
+   font-size: 28px;
+   line-height: 37px;
+   font-weight: 400;
+   transform: translateZ(100px);
+   margin: 0 0 42px 0;
+}
+
+.categories .text:hover h3 {
+   /* text-shadow: 0 0 3px rgba(51, 51, 51, 0.3); */
+}
+
+.categories .text .textBox {
+   transform: translateZ(50px);
+      /* max-width: 140px; */
+}
+
+.categories .text a {
+   color: rgb(var(--white));
+   font-weight: 600;
+   font-size: var(--para_16);
+   font-family: var(--barlow);
+   text-transform: uppercase;
+   transition: var(--trans);
+}
+
+.categories .text a::after {
+   content: "\f054";
+   font-family: "fontawesome";
+   margin-left: 10px;
+   font-size: 12px;
+   transition: var(--trans);
+}
+
+.categories .text:hover a{
+   color: rgb(var(--green));
+}
+
+.categories .text a:hover::after {
+   margin-left: 15px;
+}
+
+.trendingProductCard {
+	background-color: rgb(var(--lightGrey));
+	padding: 55px 0;
+   position: relative;
+}
+.trendingProductCard .heartIcon,
+.trendingProductCard .hot{
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   cursor: pointer;
+   color: #bdbdbd;
+}
+.trendingProductCard .heartIcon:hover {
+   background-color: rgb(var(--lightGreen2));
+   color: rgb(var(--white));
+}
+.trendingProductCard .hot {
+	right: auto;
+   top: 0;
+	left: 0;
+	min-width: 50px;
+	height: 28px;
+	line-height: 28px;
+   font-weight: 500;
+   font-size: 15px;
+   font-family: var(--jost);
+	background-color: #d9485b;
+	color: rgb(var(--white));
+}
+.trendingProductCard .img {
+	height: 180px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.trendingProductCard .img img{}
+.trendingProductCard .text{}
+.trendingProductCard .text h4{
+   font-family: var(--jost);
+   color: rgb(var(--black));
+   margin-bottom: 20px;
+   font-weight: 600;
+}
+.trendingProductCard .text h6{
+   margin-bottom: 25px;
+}
+.trendingProductCard .text h6 span{}
+.trendingProductCard .text h6 span.discountPrice {
+   font-weight: 400;
+   color: #b2b3b4;
+   font-family: var(--barlow);
+}
+.trendingProductCard .text h6 span.price {
+   color: rgb(var(--lightGreen2));
+   font-weight: 600;
+}
+.trendingProductCard .text .btn {
+   min-width: 120px;
+   height: 40px;
+   font-size: 14px;
+}
+
 /*===========================================
     HomePage CSS Style End
 =============================================*/
+
+
+
+@media (max-height: 768px) {
+   .loginForm, .homeBanner {
+      height: auto;
+   }
+
+}
