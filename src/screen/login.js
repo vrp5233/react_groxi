@@ -21,14 +21,14 @@ class LoginComponent extends React.Component {
          <div>
 
             <NavigationComponent />
-            <section className="homeBanner innerBanner loginForm innerBannerImage bannerVectorImage banner">
+            <section className="homeBanner innerBanner loginForm innerBannerImage banner">
                <Container>
                   {
                      this.state.showMe ?
                         <div div className="wrapper loginFormWrapper">
                            <h3 className="mb-4 text-center">Login</h3>
                            <Form>
-                              <Row xs={2} md={4} lg={1}>
+                              <Row xs={1}>
                                  <Col>
                                     <Form.Group className="form-group" controlId="formBasicEmail">
                                        <Form.Control type="email" placeholder="Enter email" />
@@ -54,7 +54,7 @@ class LoginComponent extends React.Component {
                         </div> : <div className="wrapper signFormWrapper">
                            <h3 className="mb-4 text-center">Sign Up</h3>
                            <Form>
-                              <Row xs={2} md={4} lg={2}>
+                              <Row xs={1} sm={2}>
                                  <Col>
                                     <Form.Group className="form-group" controlId="formBasicEmail">
                                        <Form.Control type="text" placeholder="Name" />

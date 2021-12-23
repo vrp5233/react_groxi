@@ -1,17 +1,22 @@
 import React from "react";
-import NavigationComponent from '../component/navigation';
 import Tilt from 'react-tilt'
-import { Link, NavLink } from "react-router-dom";
-
-import TrendingProductComponent from "../component/trendingProduct";
+import { Link } from "react-router-dom";
 import { Container, ButtonGroup, Row, Col } from 'react-bootstrap'
 
 
+import NavigationComponent from '../component/navigation';
+import SliderComponent from "../component/slider";
+import TrendingProductComponent from "../component/trendingProduct";
+
+
+const users = [1, 2, 3, 4, 5, 6];
 class HomeComponent extends React.Component {
+   
    render() {
       return (
          <div>
             <NavigationComponent />
+
             <section className="homeBanner bannerVectorImage banner pt-0">
                <img src="images/supermarket-paper-bag-full-healthy-food.png" alt="BannerImage" className="img-fluid bannerImages" />
                <Container className="textWrapper">
@@ -26,7 +31,6 @@ class HomeComponent extends React.Component {
                   </div>
                </Container>
             </section>
-
 
             <section className="categories">
                <Container>
@@ -68,17 +72,48 @@ class HomeComponent extends React.Component {
                </Container>
             </section>
 
-            <section className="trendingProduct p-0">
+            <section className="trendingProduct pt-0">
                <Container>
                   <h3 className="smallTitle text-center">Most Popular</h3>
                   <h2 className="title text-center">Trending Products</h2>
                   <Row>
-                     for (i = 0; i <4; ++i ) {
-                        <Col lg={4} className="text-center">
-                           <TrendingProductComponent />
-                        </Col>
-                     }
+                     {users.map(user => {
+                        return (
+                           <Col lg={4} className="text-center">
+                              <TrendingProductComponent />
+                           </Col>
+                        )
+                     })}
                   </Row>
+               </Container>
+            </section>
+
+            <section className="homeBanner homeAboutSection banner pt-0">
+               <img src="images/flat-lay-with-paper-bag-vegetables-fruits-white.jpg" alt="BannerImage" className="img-fluid bannerImages" />
+               <Container className="textWrapper">
+                  <Row className="justify-content-end">
+                     <Col lg={7}>
+                        <div className="textWrap">
+                           <div className="text">
+                              <h3 className="smallTitle">Welcome To Our Grocery Store</h3>
+                              <h1 className="title">Shop Online For <br />Fresh Grocries</h1>
+                              <h5 className="fw400">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+                              <ButtonGroup>
+                                 <button className="btn lightGreenBtn">Shop now</button>
+                                 <button className="btn GreenBtn">Read More</button>
+                              </ButtonGroup>
+                           </div>
+                        </div>
+                     </Col>
+                  </Row>
+               </Container>
+            </section>
+
+            <section className="testimonial">
+               <Container>
+                  <h3 className="smallTitle text-center">Testimonials</h3>
+                  <h2 className="title text-center">What Our Customers Saying</h2>
+                  <SliderComponent />
                </Container>
             </section>
 
