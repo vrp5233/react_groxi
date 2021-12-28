@@ -2,7 +2,6 @@ import React from "react";
 import StarRating from 'star-rating-react';
 
 import Slider from "react-slick";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -37,9 +36,9 @@ class SliderComponent extends React.Component {
       return (
          <div id="testiSlider" className="testiSlider">
             <Slider {...this.state.sliderTesti}>
-               {sliders.map(user => {
+               {sliders.map((user, u) => {
                   return (
-                     <div className="box">
+                     <div className="box" key={u}>
                         <p>”Quisquam est, qui dolorem ipsum quia dolor sit
                            consectetur adipisci velit sed quia non numqua
                            eius modi tempora incidunt ut labore et dolore

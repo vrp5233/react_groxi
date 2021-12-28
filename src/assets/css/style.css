@@ -156,10 +156,12 @@ p {
 section {
    padding: 140px 0;
 }
-#root, 
-#root >div{
+
+#root,
+#root>div {
    height: 100%;
 }
+
 /*===========================================
    Body CSS Style End
 =============================================*/
@@ -296,19 +298,19 @@ label {
 }
 
 .innerBannerImage {
-   background: url(../../../public/images/innerBanner.png) right bottom no-repeat, 
-   url(http://localhost:3000/static/media/bannerVector.13ffaddc9c36572be943.png) top left no-repeat;
+   background: url(../../../public/images/innerBanner.png) right bottom no-repeat,
+      url(../../../public/images/bannerVector.png) top left no-repeat;
 }
 
 .aboutBannerImage {
    background-image: url(../../../public/images/flat-lay-with-paper-bag-vegetables-fruits-white.png);
 }
 
-/* .bannerVectorImage {
-   background-image: url(http://localhost:3000/static/media/bannerVector.13ffaddc9c36572be943.png);
+.bannerVectorImage {
+   background-image: url(../../../public/images/bannerVector.png);
    background-size: auto;
    background-position: left top;
-} */
+}
 
 /*===========================================
   Banner CSS Style End
@@ -545,9 +547,12 @@ header .navbar-brand {
 
 .trendingProductCard {
    background-color: rgb(var(--lightGrey));
-   padding: 55px 0;
+   border: 2px solid transparent;
+   padding: 55px 25px;
    position: relative;
    margin-bottom: 30px;
+   transition: var(--trans);
+   width: 100%;
 }
 
 .trendingProductCard .heartIcon,
@@ -559,7 +564,12 @@ header .navbar-brand {
    color: #bdbdbd;
 }
 
-.trendingProductCard .heartIcon:hover {
+.trendingProductCard:hover {
+   border: 2px solid rgb(var(--lightGreen2));
+}
+
+.trendingProductCard .heartIcon:hover,
+.trendingProductCard:hover .heartIcon {
    background-color: rgb(var(--lightGreen2));
    color: rgb(var(--white));
 }
@@ -634,30 +644,163 @@ header .navbar-brand {
    background-color: #fff;
    padding: 0 65px;
 }
+
 .testiSlider {}
-.testiSlider .slick-slide >div {
-   margin:0 15px;
+
+.testiSlider .slick-slide>div {
+   margin: 0 15px;
 }
-.testiSlider .box{
+
+.testiSlider .box {
    background-color: rgb(var(--lightGrey));
    border-top: 2px solid rgb(var(--lightGreen2));
    padding: 40px;
 }
-.testiSlider .box p{
+
+.testiSlider .box p {
    font-size: 23px;
    color: #6c6c6c;
    font-style: italic;
    line-height: 35px;
 }
-.testiSlider .box .ratingStar{}
-.testiSlider .box h6{
+
+.testiSlider .box .ratingStar {}
+
+.testiSlider .box h6 {
    color: rgb(var(--green));
    font-family: var(--jost);
    font-weight: 500;
 }
-.testiSlider .box h6 span{
+
+.testiSlider .box h6 span {
    color: rgb(var(--lightGreen2));
    font-style: 16px;
+}
+
+.featuredListBtn {
+   display: flex;
+   justify-content: center;
+   column-gap: 15px;
+   margin-bottom: 70px;
+}
+
+.featuredListBtn .text {
+   background-color: transparent;
+   border: 0;
+   font-size: var(--heading_22);
+}
+
+.featuredProducts {
+   background-color: rgb(var(--lightGrey));
+}
+
+.featuredProducts .trendingProductCard {
+   background-color: rgb(var(--white));
+}
+
+.innerBanner {
+   height: auto !important;
+   padding: 220px 0 125px;
+}
+
+.innerBanner .textWrapper {
+   position: static;
+   transform: translateY(0%);
+}
+
+.innerBanner .textWrapper .text {
+   background-color: rgb(var(--white));
+   border-top: 2px solid rgb(var(--lightGreen2));
+   padding: 40px;
+   margin: 0 auto;
+   max-width: none;
+   min-width: 500px;
+   display: inline-block;
+   /* margin: 0 auto; */
+   width: auto;
+}
+
+.innerBanner .smallTitle {
+   font-size: var(--heading_22);
+}
+
+.innerBanner .title {
+   font-size: 60px;
+   margin-bottom: 0;
+}
+
+.productSlider {
+   position: relative;
+   display: flex;
+   width: 100%;
+   column-gap: 20px;
+   /* flex-wrap: wrap; */
+   max-width: 600px;
+   max-height: 610px;
+   overflow: hidden;
+}
+
+/* .productSliderthumb{
+	position: absolute;
+	top: 0;
+	left: 0;
+   z-index: 9;
+} */
+.productSliderthumb {
+   max-width: 95px;
+   padding: 50px 0;
+   /* height: 100%; */
+}
+
+.productSliderBig {
+   width: 100%;
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: calc(100% - 20%);
+   max-width: calc(100% - 115px);
+}
+
+.productSliderthumb .slick-arrow {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: rgb(var(--lightGreen2));
+   transform: translate(0, 0%);
+   height: 30px;
+}
+
+.productSliderthumb .slick-arrow.slick-next {
+   top: auto;
+   bottom: 0;
+}
+
+.slick-prev::before, .slick-next::before {
+   font-family: "fontawesome";
+   font-size: 16px;
+}
+
+.slick-prev::before {
+   content: "\f077";
+}
+
+.slick-next::before {
+   content: "\f078";
+}
+
+.productSliderthumb .slick-track .slick-slide {
+	margin: 9px 0;
+	cursor: pointer;
+	max-width: 95px;
+	height: 90px;
+}  
+
+.productSliderthumb .slick-slide.slick-current {
+   border: 2px solid rgb(var(--lightGreen2));
+}
+.productSliderthumb .slick-list {
+	display: flex;
+	height: 100% !important;
 }
 /*===========================================
     HomePage CSS Style End

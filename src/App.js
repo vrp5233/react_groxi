@@ -8,6 +8,7 @@ import AboutComponent from './screen/about';
 import PagesComponent from './screen/pages';
 import ShopComponent from './screen/shop';
 import BlogComponent from './screen/blog';
+import ProductDetailsComponent from './screen/productDetails';
 
 
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/shop" element={<ShopComponent />} />
         <Route path="/login" element={<LoginComponent />} />
         <Route path="/signup" element={<SignUpComponent />} />
+        <Route path="/productDetails" element={<ProductDetailsComponent />} />
       </Routes>
     </Router>
   );

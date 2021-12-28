@@ -5,7 +5,7 @@ const ProductList = [{
    "priceOff": "$24.09",
    "rating": 1,
    "image": "images/Beef-Steak.png",
-   "category": "Extract - Lemon",
+   "category": "Food",
    "tag": ""
 }, {
    "id": 2,
@@ -14,7 +14,7 @@ const ProductList = [{
    "priceOff": "$52.86",
    "rating": 3,
    "image": "images/Beef-Steak.png",
-   "category": "Stock - Veal, Brown",
+   "category": "Fruits",
    "tag": "Hot"
 }, {
    "id": 3,
@@ -23,7 +23,7 @@ const ProductList = [{
    "priceOff": "$6.81",
    "rating": 3,
    "image": "images/Beef-Steak.png",
-   "category": "Salmon - Canned",
+   "category": "Health",
    "tag": "Hot"
 }, {
    "id": 4,
@@ -32,7 +32,7 @@ const ProductList = [{
    "priceOff": "$34.89",
    "rating": 5,
    "image": "images/Beef-Steak.png",
-   "category": "Fond - Chocolate",
+   "category": "Meat",
    "tag": "Hot"
 }, {
    "id": 5,
@@ -41,7 +41,7 @@ const ProductList = [{
    "priceOff": "$61.88",
    "rating": 2,
    "image": "images/Beef-Steak.png",
-   "category": "Glycerine",
+   "category": "Dairy",
    "tag": ""
 }, {
    "id": 6,
@@ -50,44 +50,46 @@ const ProductList = [{
    "priceOff": "$17.66",
    "rating": 3,
    "image": "images/Beef-Steak.png",
-   "category": "Bagelers - Cinn / Brown",
+   "category": "Food",
    "tag": ""
-}, {
-   "id": 7,
-   "name": "Fubar II (Fubar: Balls to the Wall)",
-   "price": "$31.11",
-   "priceOff": "$44.63",
-   "rating": 5,
-   "image": "images/Beef-Steak.png",
-   "category": "Veal - Brisket, Provimi,bnls",
-   "tag": "Hot"
-}, {
-   "id": 8,
-   "name": "Run of the Country, The",
-   "price": "$45.35",
-   "priceOff": "$12.70",
-   "rating": 4,
-   "image": "images/Beef-Steak.png",
-   "category": "Wine - Fat Bastard Merlot",
-   "tag": "Hot"
-}, {
-   "id": 9,
-   "name": "Witches, The (Le streghe)",
-   "price": "$74.12",
-   "priceOff": "$34.51",
-   "rating": 2,
-   "image": "images/Beef-Steak.png",
-   "category": "Veal - Liver",
-   "tag": "Hot"
-}, {
-   "id": 10,
-   "name": "Free the Nipple",
-   "price": "$29.64",
-   "priceOff": "$25.85",
-   "rating": 2,
-   "image": "images/Beef-Steak.png",
-   "category": "Sword Pick Asst",
-   "tag": ""
-}]
+ }, 
+//{
+//    "id": 7,
+//    "name": "Fubar II (Fubar: Balls to the Wall)",
+//    "price": "$31.11",
+//    "priceOff": "$44.63",
+//    "rating": 5,
+//    "image": "images/Beef-Steak.png",
+//    "category": "Veal - Brisket, Provimi,bnls",
+//    "tag": "Hot"
+// }, {
+//    "id": 8,
+//    "name": "Run of the Country, The",
+//    "price": "$45.35",
+//    "priceOff": "$12.70",
+//    "rating": 4,
+//    "image": "images/Beef-Steak.png",
+//    "category": "Wine - Fat Bastard Merlot",
+//    "tag": "Hot"
+// }, {
+//    "id": 9,
+//    "name": "Witches, The (Le streghe)",
+//    "price": "$74.12",
+//    "priceOff": "$34.51",
+//    "rating": 2,
+//    "image": "images/Beef-Steak.png",
+//    "category": "Veal - Liver",
+//    "tag": "Hot"
+// }, {
+//    "id": 10,
+//    "name": "Free the Nipple",
+//    "price": "$29.64",
+//    "priceOff": "$25.85",
+//    "rating": 2,
+//    "image": "images/Beef-Steak.png",
+//    "category": "Sword Pick Asst",
+//    "tag": ""
+// }
+]
 
 export default ProductList;

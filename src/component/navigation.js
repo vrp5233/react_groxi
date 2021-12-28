@@ -1,8 +1,9 @@
 import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { Link, NavLink } from "react-router-dom";
 
 import { Container, Navbar, Nav, NavItem } from 'react-bootstrap'
 class NavigationComponent extends React.Component {
