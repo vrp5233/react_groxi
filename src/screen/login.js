@@ -1,7 +1,7 @@
 import React from "react";
 import NavigationComponent from '../component/navigation';
 
-import { Container, Form, Row, Col, Nav, Link } from 'react-bootstrap'
+import { Container, Form, Row, Col } from 'react-bootstrap'
 
 
 class LoginComponent extends React.Component {

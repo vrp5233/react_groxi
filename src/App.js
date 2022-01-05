@@ -9,6 +9,7 @@ import PagesComponent from './screen/pages';
 import ShopComponent from './screen/shop';
 import BlogComponent from './screen/blog';
 import ProductDetailsComponent from './screen/productDetails';
+import ErrorComponent from './screen/error';
 
 
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/login" element={<LoginComponent />} />
         <Route path="/signup" element={<SignUpComponent />} />
         <Route path="/productDetails" element={<ProductDetailsComponent />} />
+        <Route path="" element={<ErrorComponent />} />
       </Routes>
     </Router>
   );

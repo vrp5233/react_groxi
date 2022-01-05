@@ -7,7 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import StarRating from 'star-rating-react';
-import { Container, ButtonGroup, Row, Col } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
+
+// const currentURL = window.location.href;
 class TrendingProductComponent extends React.Component {
 
    constructor(props) {
@@ -18,21 +20,22 @@ class TrendingProductComponent extends React.Component {
 
    }
    truncate(str) {
-      return str.length > 10 ? str.substring(0, 14) + "..." : str;
+      return str.length > 10 ? str.substring(0, 10) + "..." : str;
    }
-   render() {
 
+   render() {
+      const currentURL = window.location.pathname;
+      console.log(currentURL)
       return (
          <>
 
             {this.state.items.map((product, i) => {
                return (
 
-                  <Col lg={4} className="text-center d-flex" key={i}>
-                     <Link to="productDetails">
+                  <Col lg={currentURL === "/productDetails" ? 3 : 4} className="text-center d-flex" key={i}>
+                     <Link to="/productDetails" className="w-100 d-flex">
                         <div className="trendingProductCard">
                            {product.tag === 'Hot' ? <span className="hot">{product.tag}</span> : null}
-
                            <span className="heartIcon"><FontAwesomeIcon icon={faHeart} /></span>
                            <div className="img">
                               <img src={product.image} alt="Beef Steak" />
