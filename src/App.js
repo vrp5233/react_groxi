@@ -10,15 +10,13 @@ import ShopComponent from './screen/shop';
 import BlogComponent from './screen/blog';
 import ProductDetailsComponent from './screen/productDetails';
 import ErrorComponent from './screen/error';
-
-
-
+import Homepage from './screen/Homepage/Homepage';
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<HomeComponent />} />
+        <Route exact path="/" element={<Homepage />} />
         <Route path="/about" element={<AboutComponent />} />
         <Route path="/contact" element={<ContactComponent />} />
         <Route path="/pages" element={<PagesComponent />} />
