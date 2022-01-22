@@ -179,7 +179,7 @@ class ProductDetailsComponent extends React.Component {
                         <h2 className="title">Related Products</h2>
                         <div className="realatedProductsWrap">
                            <Row>
-                              <TrendingProductComponent />
+                              <TrendingProductComponent noOfCols={3} />
                            </Row>
                         </div>
                      </Col>

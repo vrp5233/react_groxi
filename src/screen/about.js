@@ -34,7 +34,7 @@ class AboutComponent extends React.Component {
                      {/* {ProductList.map(user => {
                         return (
                            <Col lg={4} className="text-center">                               */}
-                     <TrendingProductComponent />
+                     <TrendingProductComponent noOfCols={3} />
                      {/* </Col>
                            )
                         })} */}

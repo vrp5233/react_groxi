@@ -56,7 +56,7 @@ class HomeComponent extends React.Component {
                         <h3 className="smallTitle text-center">Most Popular</h3>
                         <h2 className="title text-center">Trending Products</h2>
                         <Row>
-                            <TrendingProductComponent />
+                            <TrendingProductComponent noOfCols={4} />
                         </Row>
                     </Container>
                 </section>
