@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import Tilt from 'react-tilt'
 import { Container, ButtonGroup, Row, Col } from 'react-bootstrap'
-
-
-import NavigationComponent from '../component/navigation';
-import FooterComponent from '../component/footer';
+import Base from "../core/Base";
 import TrendingProductComponent from "../component/trendingProduct";
 // import ProductList from "../component/productList";
 
@@ -17,8 +13,7 @@ class HomeComponent extends React.Component {
 
    render() {
       return (
-         <div>
-            <NavigationComponent />
+         <Base>
 
             <section className="homeBanner bannerVectorImage banner pt-0">
                <img src="images/supermarket-paper-bag-full-healthy-food.png" alt="BannerImage" className="img-fluid bannerImages" />
@@ -125,9 +120,7 @@ class HomeComponent extends React.Component {
                </Container>
             </section>
 
-            <FooterComponent />
-
-         </div>
+         </Base>
       )
    }
 }
