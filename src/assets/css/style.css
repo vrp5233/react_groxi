@@ -597,7 +597,7 @@ label {
 }
 
 .trendingProductCard .img img {
-	width: 100%;
+   width: 100%;
 }
 
 .trendingProductCard .text {}
@@ -646,8 +646,8 @@ label {
 
 
 .homeAboutSection .textWrap {
-	background-color: #fff;
-	padding: 65px;
+   background-color: #fff;
+   padding: 65px;
 }
 
 .testiSlider {}
@@ -744,20 +744,24 @@ label {
    max-height: 610px;
    /* overflow: hidden; */
 }
+
 /* .js-image-zoom__zoomed-area, */
-.js-image-zoom__zoomed-image{
-	/* position: fixed !important; */
+.js-image-zoom__zoomed-image {
+   /* position: fixed !important; */
 }
+
 .bigSliderImages img {
    /* width: 100% !important; */
    /* height: 100% !important; */
 }
-.productSliderBig{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+
+.productSliderBig {
+   display: flex;
+   justify-content: center;
+   align-items: center;
    background-color: rgb(var(--lightGrey));
 }
+
 /* .productSliderthumb{
 	position: absolute;
 	top: 0;
@@ -839,11 +843,11 @@ label {
 
 .productDetails .text h6 {}
 
-.productDetails > .text h6 .discountPrice {
+.productDetails>.text h6 .discountPrice {
    font-size: 30px;
 }
 
-.productDetails > .text h6 .price {
+.productDetails>.text h6 .price {
    font-size: 40px;
 }
 
@@ -875,10 +879,11 @@ label {
    font-weight: 100;
 }
 
-.counterButton > button:hover {
+.counterButton>button:hover {
    background-color: rgb(var(--green));
    color: rgb(var(--white));
 }
+
 .counterButton>button:last-child {
    border-right: 0;
    border-left: 1px solid #deecf0;
@@ -898,7 +903,7 @@ label {
 }
 
 .productDetails .text p,
-.tabs .tab-content p  {
+.tabs .tab-content p {
    font-size: 20px;
    line-height: 32px;
    color: #6c6c6c;
@@ -926,48 +931,66 @@ label {
 }
 
 .productDetails .tabs {
-	margin-top: 90px;
+   margin-top: 90px;
 }
+
 .tabs {}
 
 .tabs .nav {
-	flex-direction: row !important;
+   flex-direction: row !important;
    border-bottom: 2px solid #deecf0;
 }
 
 .tabs .nav .nav-item .nav-link {
    font-size: 22px;
-	font-weight: 500;
-	font-family: var(--jost);
-	color: rgb(var(--black));
+   font-weight: 500;
+   font-family: var(--jost);
+   color: rgb(var(--black));
    border-radius: 0;
    border-bottom: 2px solid transparent;
    cursor: pointer;
 }
+
 .tabs .nav .nav-item .nav-link.active,
 .tabs .nav .nav-item .nav-link:hover {
    background-color: transparent;
    border-color: rgb(var(--lightGreen2));
 }
+
 .tabs .tab-content {
    padding: 35px 0;
 }
+
 .activeMenu,
 .navigationMenu .nav-item a.active {
    color: rgb(var(--lightGreen2));
 }
+
 .productSliderthumb .slick-slide img {
-	width: 100% !important;
-	height: 100% !important;
-	object-fit: cover;
+   width: 100% !important;
+   height: 100% !important;
+   object-fit: cover;
 }
-.productSliderthumb .slick-track .slick-slide > div {
-	height: 100%;
+
+.productSliderthumb .slick-track .slick-slide>div {
+   height: 100%;
 }
+
 /*===========================================
     HomePage CSS Style End
 =============================================*/
-
+.is-sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 999;
+   box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+   background-color: #ffffff !important;
+   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+   padding-top: 0px;
+   padding-bottom: 0px;
+}
 
 
 @media (max-height: 768px) {

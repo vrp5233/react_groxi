@@ -1,9 +1,8 @@
 import React from "react";
-import NavigationComponent from '../component/navigation';
 
 import { Container, ButtonGroup, Row, Col } from 'react-bootstrap';
 
-import SliderComponent from "./slider";
+import SliderComponent from "./Slider";
 
 const FooterComponent = () => {
    return (

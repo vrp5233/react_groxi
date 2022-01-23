@@ -1,5 +1,5 @@
 import React from "react";
-import ProductList from './productList';
+import ProductList from './ProductList';
 import ProductCard from "./ProductCard";
 
 // const currentURL = window.location.href;
