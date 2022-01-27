@@ -329,6 +329,7 @@ label {
    left: 0;
    width: 100%;
    z-index: 999;
+   transition: all 0.3s;
 }
 
 #header .navbar-brand {
@@ -979,17 +980,17 @@ label {
 /*===========================================
     HomePage CSS Style End
 =============================================*/
-.is-sticky {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   z-index: 999;
-   box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
-   background-color: #ffffff !important;
-   animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
-   padding-top: 0px;
-   padding-bottom: 0px;
+#header.is-sticky {
+	box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+	background-color: rgb(var(--lightGrey)) !important;
+	animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+   padding: 25px 0;
+}
+
+#header.is-sticky .iconMenu .nav-item a, 
+#header.is-sticky .heartIcon {
+	background-color: rgb(var(--lightGreen2));
+	color: rgb(var(--white));
 }
 
 

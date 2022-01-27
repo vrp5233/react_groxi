@@ -24,7 +24,7 @@ const NavigationComponent = () => {
   const isSticky = (e) => {
     const header = document.querySelector("#header");
     const scrollTop = window.scrollY;
-    scrollTop >= 250
+    scrollTop >= 10
       ? header.classList.add("is-sticky")
       : header.classList.remove("is-sticky");
   };

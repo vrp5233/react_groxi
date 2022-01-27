@@ -1,18 +1,18 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Base from "../core/Base";
 const ShopComponent = () => {
   return (
     <Base>
-      <section className="homeBanner">
-        <img
-          src="images/supermarket-paper-bag-full-healthy-food.png"
-          alt="BannerImage"
-          className="img-fluid bannerImages"
-        />
-        <Container className="textWrapper">
+    <section className="homeBanner innerBanner innerBannerImage banner">
+        <Container className="textWrapper text-center">
           <div className="text">
-            <h1 className="title">Shop</h1>
+            <h3 className="smallTitle text-center">
+              Home <FontAwesomeIcon icon={faArrowRight} /> About Us
+            </h3>
+            <h2 className="title text-center">Shop</h2>
           </div>
         </Container>
       </section>
