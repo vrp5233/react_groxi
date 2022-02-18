@@ -42,7 +42,7 @@ class LoginComponent extends React.Component {
                       </Form.Group>
                     </Col>
                     <Col className="text-center" xs={12}>
-                      <Form.Group className="form-group">
+                      <Form.Group className="form-group text-center mb-2">
                         <button className="btn lightGreenBtn" type="submit">
                           Login
                         </button>
@@ -100,7 +100,7 @@ class LoginComponent extends React.Component {
                       </Form.Group>
                     </Col>
                     <Col className="text-center" xs={12} md={12} lg={12}>
-                      <Form.Group className="form-group">
+                      <Form.Group className="form-group text-center mb-2">
                         <button className="btn lightGreenBtn" type="submit">
                           Sign Up
                         </button>

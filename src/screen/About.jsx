@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import TrendingProductComponent from "../component/TrendingProduct";
-import FooterComponent from "../component/Footer";
 import Base from "../core/Base";
 
 const AboutComponent = () => {
@@ -38,8 +37,6 @@ const AboutComponent = () => {
           </Row>
         </Container>
       </section>
-
-      <FooterComponent />
     </Base>
   );
 };

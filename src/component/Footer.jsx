@@ -6,7 +6,7 @@ import SliderComponent from "./Slider";
 
 const FooterComponent = () => {
    return (
-      <div>
+      <>
          <section className="testimonial">
             <Container>
                <h3 className="smallTitle text-center">Testimonials</h3>
@@ -14,7 +14,7 @@ const FooterComponent = () => {
                <SliderComponent />
             </Container>
          </section>
-      </div>
+      </>
    )
 }
 export default FooterComponent;

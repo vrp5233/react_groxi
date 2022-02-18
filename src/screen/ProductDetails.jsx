@@ -9,6 +9,7 @@ import {
   faPinterest,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
+import Base from "../core/Base";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,8 +17,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import StarRating from "star-rating-react";
 import ReactImageZoom from "react-image-zoom";
+import LazyLoad from "react-lazyload";
 
-import FooterComponent from "../component/Footer";
 import TrendingProductComponent from "../component/TrendingProduct";
 
 // const slider1 = [1, 2, 3, 4, 5, 6];
@@ -64,7 +65,7 @@ class ProductDetailsComponent extends React.Component {
   }
   render() {
     return (
-      <div>
+      <Base>
         <section className="homeBanner innerBanner innerBannerImage banner">
           <Container className="textWrapper text-center">
             <div className="text">
@@ -244,16 +245,17 @@ class ProductDetailsComponent extends React.Component {
               <Col lg={12}>
                 <h2 className="title">Related Products</h2>
                 <div className="realatedProductsWrap">
-                  <Row>
-                    <TrendingProductComponent noOfCols={3} />
-                  </Row>
+                  <LazyLoad height={150}>
+                    <Row>
+                      <TrendingProductComponent noOfCols={3} />
+                    </Row>
+                  </LazyLoad>
                 </div>
               </Col>
             </Row>
           </Container>
         </section>
-        <FooterComponent />
-      </div>
+      </Base>
     );
   }
 }
