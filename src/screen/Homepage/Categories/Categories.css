@@ -1,0 +1,72 @@
+
+.categories {}
+
+.categories .text {
+   padding: 80px 30px;
+   position: relative;
+   overflow: hidden;
+   transform-style: preserve-3d;
+}
+
+.categories .text:hover {}
+
+.categories .text img {
+   position: absolute;
+   right: 25px;
+   bottom: 0px;
+   filter: drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0));
+   transform: translateZ(50px);
+   transition: var(--trans);
+}
+
+.categories .text:hover img {
+   filter: drop-shadow(-10px 0px 10px rgba(0, 0, 0, 0.2));
+}
+
+.categories .text img[alt="Vegitables"] {
+   right: -7px;
+   bottom: -5px;
+}
+
+.categories .text h3 {
+   font-family: var(--jost);
+   font-size: 28px;
+   line-height: 37px;
+   font-weight: 400;
+   transform: translateZ(100px);
+   margin: 0 0 42px 0;
+}
+
+.categories .text:hover h3 {
+   /* text-shadow: 0 0 3px rgba(51, 51, 51, 0.3); */
+}
+
+.categories .text .textBox {
+   transform: translateZ(50px);
+   /* max-width: 140px; */
+}
+
+.categories .text a {
+   color: rgb(var(--white));
+   font-weight: 600;
+   font-size: var(--para_16);
+   font-family: var(--barlow);
+   text-transform: uppercase;
+   transition: var(--trans);
+}
+
+.categories .text a::after {
+   content: "\f054";
+   font-family: "fontawesome";
+   margin-left: 10px;
+   font-size: 12px;
+   transition: var(--trans);
+}
+
+.categories .text:hover a {
+   color: rgb(var(--green));
+}
+
+.categories .text a:hover::after {
+   margin-left: 15px;
+}

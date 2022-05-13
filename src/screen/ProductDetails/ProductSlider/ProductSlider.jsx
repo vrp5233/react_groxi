@@ -2,14 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebookF,
-  faTwitter,
-  faLinkedinIn,
-  faPinterest,
-  faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-import Base from "../core/Base";
+import { faFacebookF, faTwitter, faLinkedinIn, faPinterest, faInstagram, } from "@fortawesome/free-brands-svg-icons";
+import Base from "../../core/Base";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -19,7 +13,9 @@ import StarRating from "star-rating-react";
 import ReactImageZoom from "react-image-zoom";
 import LazyLoad from "react-lazyload";
 
-import TrendingProductComponent from "../component/TrendingProduct";
+import TrendingProductComponent from "../../component/TrendingProduct";
+import InnerHeader from "../../component/InnerHeader/InnerHeader";
+
 
 // const slider1 = [1, 2, 3, 4, 5, 6];
 
@@ -66,16 +62,9 @@ class ProductDetailsComponent extends React.Component {
   render() {
     return (
       <Base>
-        <section className="homeBanner innerBanner innerBannerImage banner">
-          <Container className="textWrapper text-center">
-            <div className="text">
-              <h3 className="smallTitle text-center">
-                Home <FontAwesomeIcon icon={faArrowRight} /> Product Detail
-              </h3>
-              <h2 className="title text-center">Product Detail</h2>
-            </div>
-          </Container>
-        </section>
+        <InnerHeader
+          title="Product Detail"
+        />
 
         <section className="productDetails pb-0">
           <Container>
@@ -247,7 +236,7 @@ class ProductDetailsComponent extends React.Component {
                 <div className="realatedProductsWrap">
                   <LazyLoad height={150}>
                     <Row>
-                      <TrendingProductComponent noOfCols={3} />
+                      {/* <TrendingProductComponent noOfCols={3} /> */}
                     </Row>
                   </LazyLoad>
                 </div>

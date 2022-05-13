@@ -1,0 +1,22 @@
+
+.featuredListBtn {
+   display: flex;
+   justify-content: center;
+   column-gap: 15px;
+   margin-bottom: 70px;
+ }
+ 
+ .featuredListBtn .text {
+   background-color: transparent;
+   border: 0;
+   font-size: var(--heading_22);
+ }
+ 
+ .featuredProducts {
+   background-color: rgb(var(--lightGrey));
+ }
+ 
+ .featuredProducts .trendingProductCard {
+   background-color: rgb(var(--white));
+ }
+ 

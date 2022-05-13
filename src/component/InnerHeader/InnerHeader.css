@@ -1,0 +1,36 @@
+
+.homeBanner.innerBanner {
+   background-color: rgb(var(--lightGrey));
+   padding: 150px 0;
+}
+
+.homeBanner.innerBanner {
+   height: auto !important;
+   padding: 220px 0 125px;
+}
+
+.homeBanner.innerBanner .textWrapper {
+   position: static;
+   transform: translateY(0%);
+}
+
+.homeBanner.innerBanner .textWrapper .text {
+	background-color: rgb(var(--white));
+	border-top: 2px solid rgb(var(--lightGreen2));
+	padding: 40px;
+	margin: 0 auto;
+	max-width: none;
+	min-width: 390px;
+	display: inline-block;
+	/* margin: 0 auto; */
+	width: auto;
+}
+
+.homeBanner.innerBanner .smallTitle {
+   font-size: var(--heading_22);
+}
+
+.homeBanner.innerBanner .title {
+   font-size: 60px;
+   margin-bottom: 0;
+}

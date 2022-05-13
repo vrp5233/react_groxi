@@ -1,0 +1,28 @@
+
+.homeAboutSection .textWrap {
+   background-color: #fff;
+   padding: 65px;
+	margin-top: 140px;
+}
+
+.homeAboutSection .textWrap p {
+	font-size: 20px;
+	color: #6c6c6c;
+	margin-bottom: 20px;
+}
+
+.homeAboutSection .text .title {
+	font-size: 45px;
+	line-height: 51px;
+   margin-bottom: 20px;
+}
+.homeAboutSection .textWrapper {
+	top: auto;
+	transform: translateY(0%);
+	bottom: 0;
+}
+
+.homeAboutSection.banner {
+	max-height: 786px;
+	overflow: hidden;
+}

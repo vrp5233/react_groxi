@@ -8,7 +8,7 @@ import AboutComponent from './screen/About';
 import PagesComponent from './screen/Pages';
 import ShopComponent from './screen/Shop';
 import BlogComponent from './screen/Blog';
-import ProductDetailsComponent from './screen/ProductDetails';
+import ProductDetailsComponent from './screen/ProductDetails/ProductDetails';
 import ErrorComponent from './screen/Error';
 import Homepage from './screen/Homepage/Homepage';
 import ScrollToTop from './core/ScrollToTop';
@@ -27,7 +27,7 @@ function App() {
         <Route path="/shop" component={ShopComponent} />
         <Route path="/login" component={LoginComponent} />
         <Route path="/signup" component={SignUpComponent} />
-        <Route path="/product-details" component={ProductDetailsComponent} />
+        <Route path="/product-details" exact component={ProductDetailsComponent} />
         <Route path="" component={ErrorComponent} />
       </Switch>
     </BrowserRouter>

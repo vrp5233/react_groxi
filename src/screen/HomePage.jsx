@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 import Tilt from "react-tilt";
 import { Container, ButtonGroup, Row, Col } from "react-bootstrap";
 import Base from "../core/Base";
-import TrendingProductComponent from "../component/trendingProduct";
+// import TrendingProductComponent from "../component/trendingProduct";
 // import ProductList from "../component/productList";
 
 // const ProductList = [1,2];
-class HomeComponent extends React.Component {
-  render() {
+const HomeComponent = () =>{
     return (
       <Base>
         <section className="homeBanner bannerVectorImage banner pt-0">
@@ -110,7 +109,7 @@ class HomeComponent extends React.Component {
             <h3 className="smallTitle text-center">Most Popular</h3>
             <h2 className="title text-center">Trending Products</h2>
             <Row>
-              <TrendingProductComponent />
+              {/* <TrendingProductComponent /> */}
             </Row>
           </Container>
         </section>
@@ -171,13 +170,12 @@ class HomeComponent extends React.Component {
               </li>
             </ul>
             <Row>
-              <TrendingProductComponent />
+              {/* <TrendingProductComponent /> */}
             </Row>
           </Container>
         </section>
       </Base>
     );
-  }
 }
 
 export default HomeComponent;

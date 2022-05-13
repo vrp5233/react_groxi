@@ -1,6 +1,6 @@
 import React, { Children } from 'react';
 import FooterComponent from '../component/Footer';
-import NavigationComponent from '../component/Navigation';
+import NavigationComponent from '../component/Navigation/Navigation';
 
 const Base = ({ children }) => {
     return (

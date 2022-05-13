@@ -1,0 +1,68 @@
+:root {
+   /* ===== Colors ========== */
+   --green: 11, 127, 83;
+   --black: 37, 41, 50;
+   --white: 255, 255, 255;
+   --green: 20, 70, 46;
+   --lightGreen2: 169, 216, 35;
+   --lightGrey: 246, 250, 251;
+   --lightSimon: 145, 221, 216;
+   --lightDarkGrey: 189, 189, 189;
+   --lightRed: 249, 145, 30;
+   --darkOrange: 247, 139, 26;
+   /* ===== Fonts ========== */
+   --heading_70: 70px;
+   --heading_45: 45px;
+   --heading_25: 25px;
+   --heading_26: 26px;
+   --heading_24: 24px;
+   --heading_22: 22px;
+   --para_20: 20px;
+   --para_16: 16px;
+   /* ===== Fonts Family ========== */
+   --jost: 'Jost';
+   --barlow: 'Barlow';
+   --trans: all 0.3s;
+}
+
+a, button, [type="button"] {
+   outline: none;
+   text-decoration: none;
+}
+
+button:focus {
+   outline: none;
+}
+
+body .btn {
+   min-width: 175px;
+   height: 53px;
+   font-size: var(--para_16);
+   font-family: var(--barlow);
+   color: rgb(var(--white));
+   font-weight: 600;
+   text-transform: uppercase;
+   border-radius: 0;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto;
+}
+
+body .GreenBtn {
+   background-color: rgb(var(--green));
+}
+
+body .GreenBtn:hover {
+   background-color: rgb(var(--lightGreen2));
+   color: rgb(var(--white));
+}
+
+body .lightGreenBtn {
+   background-color: rgb(var(--lightGreen2));
+}
+
+body .lightGreenBtn:hover {
+   background-color: rgb(var(--green));
+   color: rgb(var(--white));
+}

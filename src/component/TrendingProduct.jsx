@@ -1,6 +1,7 @@
 import React from "react";
-import ProductList from './ProductList';
+import ProductList from '../data/ProductList';
 import ProductCard from "./ProductCard";
+import './TrendingProduct.css'
 
 // const currentURL = window.location.href;
 const TrendingProductComponent = ({ noOfCols }) => {
@@ -8,7 +9,7 @@ const TrendingProductComponent = ({ noOfCols }) => {
    console.log(currentURL)
    return (
       <>
-         {ProductList.map((product, i) => {
+         {ProductList.slice(ProductList.length - 6).map((product, i) => {
             return (
                <ProductCard noOfCols={noOfCols} key={i} product={product} />
             )

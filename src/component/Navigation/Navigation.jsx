@@ -11,6 +11,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
+
+import './Navigation.css'
+
 const NavigationComponent = () => {
   // Sticky Menu Area
   useEffect(() => {
@@ -41,7 +44,7 @@ const NavigationComponent = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="navigationMenu">
             {NavLinks.map((link, i) => (
-              <Nav.Item>
+              <Nav.Item key={i}>
                 <NavLink exact to={link.path}>
                   {link.label}
                 </NavLink>
