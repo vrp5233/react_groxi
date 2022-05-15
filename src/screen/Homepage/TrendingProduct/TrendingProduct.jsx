@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Container } from "react-bootstrap";
-import TrendingProductComponent from "../../../component/TrendingProduct";
+import TrendingProductComponent from "../../../component/TrendingProduct"
 
 const HomeBanner = () => {
     return (

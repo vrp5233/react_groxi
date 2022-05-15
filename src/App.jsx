@@ -27,7 +27,7 @@ function App() {
         <Route path="/shop" component={ShopComponent} />
         <Route path="/login" component={LoginComponent} />
         <Route path="/signup" component={SignUpComponent} />
-        <Route path="/product-details" exact component={ProductDetailsComponent} />
+        <Route path="/product-details/:id" exact component={ProductDetailsComponent} />
         <Route path="" component={ErrorComponent} />
       </Switch>
     </BrowserRouter>

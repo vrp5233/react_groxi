@@ -26,7 +26,7 @@ import InnerHeader from "../../component/InnerHeader/InnerHeader";
 // const slider1 = [1, 2, 3, 4, 5, 6];
 
 // const props = { width: 485, height: 350, zoomWidth: 485, zoomPosition: "original", img: "https://w7.pngwing.com/pngs/285/672/png-transparent-hotel-hotel-dishes-roumo-ti-hua-food-recipe-cuisine.png" };
-class ProductDetailsComponent extends React.Component {
+class ProductDetailsComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {

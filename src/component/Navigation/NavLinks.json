@@ -1,26 +1,32 @@
 [
   {
     "label": "Home",
-    "path": "/"
+    "path": "/",
+    "className": "active"
   },
   {
     "label": "About",
-    "path": "/about"
+    "path": "/about",
+    "className": "active"
   },
   {
     "label": "Shop",
-    "path": "/shop"
+    "path": "/shop",
+    "className": "active"
   },
   {
     "label": "Pages",
-    "path": "/pages"
+    "path": "/pages",
+    "className": "active"
   },
   {
     "label": "Blog",
-    "path": "/blog"
+    "path": "/blog",
+    "className": "active"
   },
   {
     "label": "Contact",
-    "path": "/contact"
+    "path": "/contact",
+    "className": "active"
   }
 ]

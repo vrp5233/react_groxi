@@ -31,6 +31,7 @@ const NavigationComponent = () => {
       ? header.classList.add("is-sticky")
       : header.classList.remove("is-sticky");
   };
+
   return (
     <Navbar id="header" expand="lg">
       <Container className="navbarWraper">
@@ -45,7 +46,7 @@ const NavigationComponent = () => {
           <Nav className="navigationMenu">
             {NavLinks.map((link, i) => (
               <Nav.Item key={i}>
-                <NavLink exact to={link.path}>
+                <NavLink exact to={link.path} >
                   {link.label}
                 </NavLink>
               </Nav.Item>
