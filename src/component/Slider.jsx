@@ -4,6 +4,7 @@ import StarRating from 'star-rating-react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Slider.css"
 
 const sliders = [1, 2, 3, 4, 5, 6];
 const sliderTesti = {
@@ -42,7 +43,7 @@ const SliderComponent = () => {
                         className="ratingStar"
                         size={5}
                         value={2}
-                        onChange={function (val) { console.log(val) }}
+                        // onChange={function (val) { console.log(val) }}
                      />
                      <h6>Alina Parker <span>Ceo, GTD</span></h6>
                   </div>

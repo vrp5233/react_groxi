@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Row, Container } from "react-bootstrap";
-// import TrendingProductComponent from "../../../component/TrendingProduct";
+import TrendingProductComponent from "../../../component/TrendingProduct";
 import "./FeaturedProducts.css";
 
 const HomeBanner = () => {
@@ -31,7 +31,7 @@ const HomeBanner = () => {
                     </li>
                 </ul>
                 <Row>
-                    {/* <TrendingProductComponent noOfCols={4} /> */}
+                    <TrendingProductComponent noOfCols={4} />
                 </Row>
             </Container>
         </section>

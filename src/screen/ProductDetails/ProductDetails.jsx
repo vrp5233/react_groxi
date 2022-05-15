@@ -18,6 +18,7 @@ import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
 import StarRating from "star-rating-react";
 import ReactImageZoom from "react-image-zoom";
 import LazyLoad from "react-lazyload";
+import "./ProductDetails.css"
 
 import TrendingProductComponent from "../../component/TrendingProduct";
 import InnerHeader from "../../component/InnerHeader/InnerHeader";
@@ -238,9 +239,7 @@ class ProductDetailsComponent extends React.Component {
                 <h2 className="title">Related Products</h2>
                 <div className="realatedProductsWrap">
                   <LazyLoad height={150}>
-                    <Row>
-                      {/* <TrendingProductComponent noOfCols={3} /> */}
-                    </Row>
+                    <Row>{/* <TrendingProductComponent noOfCols={3} /> */}</Row>
                   </LazyLoad>
                 </div>
               </Col>

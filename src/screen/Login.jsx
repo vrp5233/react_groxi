@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Form, Row, Col } from "react-bootstrap";
-import config from "../config/config";
-import { signinAPI } from "../core/services/APIservice";
+// import config from "../config/config";
+// import { signinAPI } from "../core/services/APIservice";
 
 import Base from "../core/Base";
 
@@ -10,77 +10,7 @@ const LoginComponent = () => {
   const operation = () => {
     setshowMe(!showMe);
   };
-  const initialValues = { email: "", password: "" };
-  const initialRegValues = { useremail: "", userpassword: "", userName: "", userMobile: "", };
-  const [formValues, setFormValues] = useState(initialValues);
-  const [formRegValues, setRegFormValues] = useState(initialRegValues);
 
-  const [formErrors, setFormErrors] = useState({});
-  const [formRegErrors, setRegFormErrors] = useState({});
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [register, setRegister] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
-    console.log(formValues);
-  }
-
-  const handleRegChange = (e) => {
-    const { name, value } = e.target;
-    setRegFormValues({ ...formRegValues, [name]: value });
-    console.log(formRegValues);
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setFormErrors(validate(formValues));
-    setIsSubmit(true);
-  };
-
-  const handleRegister = (e) => {
-    e.preventDefault();
-    setRegFormErrors(validate(formRegValues));
-    setRegister(true);
-  };
-
-  useEffect(() => {
-    console.log(formErrors);
-    if (Object.keys(formErrors).length === 0 && isSubmit) {
-      console.log(formValues);
-    }
-  }, [formErrors]);
-
-  useEffect(() => {
-    if (Object.keys(formRegErrors).length === 0 && register) {
-      console.log(formRegValues);
-    }
-  }, [formRegErrors]);
-
-  const validate = (values) => {
-    const errors = {};
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.email) {
-      errors.email = "Email is required!";
-    }
-    if (!values.userMobile) {
-      errors.userMobile = "Mobile No. is required!";
-    }
-    if (!values.userName) {
-      errors.userName = "Name is required!";
-    }
-    else if (!regex.test(values.email)) {
-      errors.email = "This is not a valid email format!";
-    }
-    if (!values.password) {
-      errors.password = "Password is required";
-    } else if (values.password.length < 4) {
-      errors.password = "Password must be more than 4 characters";
-    } else if (values.password.length > 10) {
-      errors.password = "Password cannot exceed more than 10 characters";
-    }
-    return errors;
-  };
   return (
     <Base>
       <section className="homeBanner innerBanner loginForm innerBannerImage banner">
@@ -88,7 +18,7 @@ const LoginComponent = () => {
           {showMe ? (
             <div div className="wrapper loginFormWrapper">
               <h3 className="mb-4 text-center">Login</h3>
-              <Form onSubmit={handleSubmit}>
+              <Form>
                 <Row xs={1}>
                   <Col>
                     <Form.Group
@@ -99,10 +29,8 @@ const LoginComponent = () => {
                         type="email"
                         name="email"
                         placeholder="Enter email"
-                        value={formValues.email}
-                        onChange={handleChange}
                       />
-                      <span className="formErrormsg">{formErrors.email}</span>
+                      {/* <span className="formErrormsg">{formErrors.email}</span> */}
                     </Form.Group>
                   </Col>
                   <Col>
@@ -114,10 +42,12 @@ const LoginComponent = () => {
                         type="password"
                         name="password"
                         placeholder="Password"
-                        value={formValues.password}
-                        onChange={handleChange}
+                        // value={formValues.password}
+                        // onChange={handleChange}
                       />
-                      <span className="formErrormsg">{formErrors.password}</span>
+                      {/* <span className="formErrormsg">
+                        {formErrors.password}
+                      </span> */}
                     </Form.Group>
                   </Col>
                   <Col className="text-center" xs={12}>
@@ -144,18 +74,23 @@ const LoginComponent = () => {
           ) : (
             <div className="wrapper signFormWrapper">
               <h3 className="mb-4 text-center">Sign Up</h3>
-              <Form onSubmit={handleRegister}>
+              <Form>
                 <Row xs={1} sm={2}>
                   <Col>
                     <Form.Group
                       className="form-group"
                       controlId="formBasicEmail"
                     >
-                      <Form.Control type="text" placeholder="Name"
+                      <Form.Control
+                        type="text"
+                        placeholder="Name"
                         name="userName"
-                        value={formRegValues.userName}
-                        onChange={handleRegChange} />
-                      <span className="formErrormsg">{formRegErrors.userName}</span>
+                        // value={formRegValues.userName}
+                        // onChange={handleRegChange}
+                      />
+                      <span className="formErrormsg">
+                        {/* {formRegErrors.userName} */}
+                      </span>
                     </Form.Group>
                   </Col>
                   <Col>
@@ -163,11 +98,16 @@ const LoginComponent = () => {
                       className="form-group"
                       controlId="formBasicEmail"
                     >
-                      <Form.Control type="email" placeholder="Enter email"
+                      <Form.Control
+                        type="email"
+                        placeholder="Enter email"
                         name="useremail"
-                        value={formRegValues.useremail}
-                        onChange={handleRegChange} />
-                      <span className="formErrormsg">{formRegErrors.email}</span>
+                        // value={formRegValues.useremail}
+                        // onChange={handleRegChange}
+                      />
+                      <span className="formErrormsg">
+                        {/* {formRegErrors.email} */}
+                      </span>
                     </Form.Group>
                   </Col>
                   <Col>
@@ -175,11 +115,16 @@ const LoginComponent = () => {
                       className="form-group"
                       controlId="formBasicEmail"
                     >
-                      <Form.Control type="text" placeholder="Mobile No."
+                      <Form.Control
+                        type="text"
+                        placeholder="Mobile No."
                         name="userMobile"
-                        value={formRegValues.userMobile}
-                        onChange={handleRegChange} />
-                      <span className="formErrormsg">{formRegErrors.userMobile}</span>
+                        // value={formRegValues.userMobile}
+                        // onChange={handleRegChange}
+                      />
+                      <span className="formErrormsg">
+                        {/* {formRegErrors.userMobile} */}
+                      </span>
                     </Form.Group>
                   </Col>
                   <Col>
@@ -187,11 +132,16 @@ const LoginComponent = () => {
                       className="form-group"
                       controlId="formBasicPassword"
                     >
-                      <Form.Control type="password" placeholder="Password"
+                      <Form.Control
+                        type="password"
+                        placeholder="Password"
                         name="userpassword"
-                        value={formRegValues.userpassword}
-                        onChange={handleRegChange} />
-                      <span className="formErrormsg">{formRegErrors.password}</span>
+                        // value={formRegValues.userpassword}
+                        // onChange={handleRegChange}
+                      />
+                      <span className="formErrormsg">
+                        {/* {formRegErrors.password} */}
+                      </span>
                     </Form.Group>
                   </Col>
                   <Col className="text-center" xs={12} md={12} lg={12}>
@@ -221,18 +171,4 @@ const LoginComponent = () => {
     </Base>
   );
 };
-// class LoginComponent extends React.Component {
-// constructor(props) {
-//   super(props);
-//   this.state = {
-//     showMe: true,
-//   };
-// }
-// operation() {
-//   this.setState({
-//     showMe: !this.state.showMe,
-//   });
-// }
-// }
-
 export default LoginComponent;

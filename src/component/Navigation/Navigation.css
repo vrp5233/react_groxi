@@ -1,93 +1,104 @@
-
 /*===========================================
     Navigation CSS Style Start
 =============================================*/
+
 #header {
-   background-color: var(--lightDarkGrey);
-   padding: 45px 0;
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   z-index: 999;
-   transition: all 0.3s;
+    background-color: var(--lightDarkGrey);
+    padding: 45px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s;
 }
 
 #header .navbar-brand {
-   padding: 0;
+    padding: 0;
 }
 
 .navbarWraper {
-   display: flex;
-   align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navigationMenu {
-   margin-left: auto;
-   display: flex;
-   column-gap: 35px;
+    margin-left: auto;
+    display: flex;
+    column-gap: 35px;
 }
 
 .iconMenu {}
 
 .navigationMenu .nav-item a {
-   font-family: var(--barlow);
-   color: rgb(var(--black));
-   font-size: var(--para_20);
-   padding: 0;
-   transition: var(--trans);
+    font-family: var(--barlow);
+    color: rgb(var(--black));
+    font-size: var(--para_20);
+    padding: 0;
+    transition: var(--trans);
 }
 
 .navigationMenu .nav-item a:hover {
-   color: rgb(var(--lightGreen2));
+    color: rgb(var(--lightGreen2));
 }
 
-
-
-
 .iconMenu {
-   display: flex;
-   column-gap: 12px;
-   margin-left: 45px;
+    display: flex;
+    column-gap: 12px;
+    margin-left: 45px;
 }
 
 .iconMenu .nav-item a,
 .heartIcon {
-   width: 42px;
-   height: 42px;
-   background-color: #fff;
-   color: rgb(var(--lightGreen2));
-   border-radius: 50px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   transition: var(--trans);
+    width: 42px;
+    height: 42px;
+    background-color: #fff;
+    color: rgb(var(--lightGreen2));
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--trans);
 }
 
 .iconMenu .nav-item a:hover {
-   color: rgb(var(--green));
+    color: rgb(var(--green));
 }
 
 .shopingCart {
-   position: relative;
+    position: relative;
 }
 
 .shopingCart .count {
-   position: absolute;
-   top: -1px;
-   right: -1px;
-   background-color: rgb(var(--green));
-   color: rgb(var(--white));
-   border-radius: 50px;
-   display: inline-block;
-   width: 13px;
-   height: 13px;
-   font-size: 8px;
-   font-family: var(--jost);
-   font-weight: 400;
-   line-height: 13px;
-   text-align: center;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    background-color: rgb(var(--green));
+    color: rgb(var(--white));
+    border-radius: 50px;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    font-size: 8px;
+    font-family: var(--jost);
+    font-weight: 400;
+    line-height: 13px;
+    text-align: center;
 }
+
+#header.is-sticky {
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+    background-color: rgb(var(--lightGrey)) !important;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    padding: 25px 0;
+}
+
+#header.is-sticky .iconMenu .nav-item a,
+#header.is-sticky .heartIcon {
+    background-color: rgb(var(--lightGreen2));
+    color: rgb(var(--white));
+}
+
 
 /*===========================================
     Navigation CSS Style End

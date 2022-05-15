@@ -5,8 +5,6 @@ import './TrendingProduct.css'
 
 // const currentURL = window.location.href;
 const TrendingProductComponent = ({ noOfCols }) => {
-   const currentURL = window.location.pathname;
-   console.log(currentURL)
    return (
       <>
          {ProductList.slice(ProductList.length - 6).map((product, i) => {

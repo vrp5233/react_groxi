@@ -1,0 +1,31 @@
+.testiSlider {}
+
+.testiSlider .slick-slide>div {
+    margin: 0 15px;
+}
+
+.testiSlider .box {
+    background-color: rgb(var(--lightGrey));
+    border-top: 2px solid rgb(var(--lightGreen2));
+    padding: 40px;
+}
+
+.testiSlider .box p {
+    font-size: 23px;
+    color: #6c6c6c;
+    font-style: italic;
+    line-height: 35px;
+}
+
+.testiSlider .box .ratingStar {}
+
+.testiSlider .box h6 {
+    color: rgb(var(--green));
+    font-family: var(--jost);
+    font-weight: 500;
+}
+
+.testiSlider .box h6 span {
+    color: rgb(var(--lightGreen2));
+    font-style: 16px;
+}
